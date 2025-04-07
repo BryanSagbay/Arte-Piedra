@@ -1,0 +1,174 @@
+---
+import logo from '../assets/astro.svg';
+import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
+---
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+  :root {
+    --primary-color: #34495e;
+    --secondary-color: #3498db;
+    --accent-color: #e67e22;
+    --text-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --transition: all 0.4s ease-in-out;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: var(--text-color);
+    overflow: hidden; /* Deshabilita el scroll */
+    height: 100vh; /* Asegura que el body ocupe toda la ventana */
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    overflow: hidden;
+  }
+
+  .about-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 3rem 4rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%; /* Asegura que el contenedor ocupe toda la altura */
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo-container img {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: var(--transition);
+    border-radius: 10px;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+    letter-spacing: -0.5px;
+  }
+
+  .content {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+
+  .content h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .content p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 10px 20px;
+    background-color: #25d366;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: var(--transition);
+  }
+
+  .button:hover {
+    background-color: #1ebe5b;
+    box-shadow: 0 7px 20px rgba(37, 211, 102, 0.4);
+    transform: translateY(-3px);
+  }
+
+  .button svg {
+    width: 20px;
+    height: 20px;
+  }
+</style>
+
+<div class="background"></div>
+
+<div class="about-container">
+  <div class="header">
+    <div class="logo-container">
+      <img src="src/assets/logo.png" alt="Logo de Arte y Piedra" />
+    </div>
+    <h1>Bienvenidos a Arte y Piedra</h1>
+  </div>
+  
+  <div class="content">
+    <h2>Estamos puliendo los últimos detalles</h2>
+    <p>Gracias por tu paciencia. Muy pronto descubrirás nuestra exclusiva colección donde el arte y la naturaleza se fusionan.</p>
+    <p>Un espacio donde lo artesanal y lo digital convergen para crear experiencias únicas.</p>
+  </div>
+  
+  <div class="button-container">
+    <a 
+      href="https://wa.me/593994096101" 
+      target="_blank" 
+      class="button"
+      aria-label="Contáctanos por WhatsApp"
+    >
+      <FaWhatsapp /> WhatsApp
+    </a>
+    <a 
+      href="tel:+593994096101" 
+      target="_blank" 
+      class="button"
+      aria-label="Llámanos"
+    >
+      <FaPhoneAlt /> +593 994096101
+    </a>
+  </div>
+</div>
