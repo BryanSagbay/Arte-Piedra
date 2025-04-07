@@ -1,6 +1,9 @@
 ---
-import logo from '../assets/astro.svg';
+
 import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
+import logoUrl from '../assets/logoicon.png?url';
+import iconUrl from '../assets/icon.svg?url';
+
 ---
 
 <style>
@@ -27,8 +30,8 @@ import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
     padding: 0;
     background-color: #f5f5f5;
     color: var(--text-color);
-    overflow: hidden; /* Deshabilita el scroll */
-    height: 100vh; /* Asegura que el body ocupe toda la ventana */
+    overflow: hidden;
+    height: 100vh;
   }
 
   .background {
@@ -54,7 +57,7 @@ import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80%; /* Asegura que el contenedor ocupe toda la altura */
+    height: 80%;
   }
 
   .header {
@@ -63,7 +66,7 @@ import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
   }
 
   .logo-container img {
-    width: 200px;
+    width: 300px;
     height: auto;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     transition: var(--transition);
@@ -106,6 +109,7 @@ import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
     gap: 1rem;
     margin-top: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .button {
@@ -135,6 +139,53 @@ import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
     width: 20px;
     height: 20px;
   }
+
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 2rem;
+      height: auto;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+    }
+
+    .content h2 {
+      font-size: 1.2rem;
+    }
+
+    .content p {
+      font-size: 0.9rem;
+    }
+
+    .button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-container img {
+      width: 150px;
+    }
+
+    .header h1 {
+      font-size: 1.2rem;
+    }
+
+    .content h2 {
+      font-size: 1rem;
+    }
+
+    .content p {
+      font-size: 0.8rem;
+    }
+
+    .button {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  }
 </style>
 
 <div class="background"></div>
@@ -142,7 +193,7 @@ import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 <div class="about-container">
   <div class="header">
     <div class="logo-container">
-      <img src="src/assets/logo.png" alt="Logo de Arte y Piedra" />
+      <img src={logoUrl} alt="Logo de Arte y Piedra" />
     </div>
     <h1>Bienvenidos a Arte y Piedra</h1>
   </div>
